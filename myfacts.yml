@@ -1,13 +1,14 @@
 ---
 -  hosts: all
    become: yes
-   gathering_facts: no 
-   tasks: 
+   gathering_facts:
+   tasks:
    - name: install git, wget, tree on nodes
      apt:
       name: "{{ item }}"
       state: present
-     with_items: 
-        - git
-        - wget
-        - tree
+     with_itens:
+      - git
+      - wget
+      - tree 
+
