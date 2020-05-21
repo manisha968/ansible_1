@@ -1,7 +1,7 @@
 ---
 -  hosts: all
    become: yes
-   gathering_facts:
+   gathering_facts: no
    tasks:
    - name: install git, wget, tree on nodes
      apt:
