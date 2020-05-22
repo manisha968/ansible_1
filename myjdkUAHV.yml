@@ -4,7 +4,7 @@
   tasks:
   - name: install jdk11 on ubuntu18 node1 
     apt:
-     name: "{{myjavaonubuntuos}}"
+     name: openjdk-11-jre-headless
      state: present
     when: ansible_os_family == "Debian"  
     
