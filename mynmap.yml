@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install Nmap on ubtuntu18 on nodes
+    apt:
+     name: Nmap
+     state: present
+    
+
