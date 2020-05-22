@@ -1,0 +1,17 @@
+---
+- hosts: ubuntuos
+  become: yes
+  tasks: 
+  - name: install git
+    apt: 
+      name: git
+    ignore_errors: yes
+   
+  - name: install tree
+    apt:
+      name: tree
+    ignore_errors: yes
+    
+  - name: install wget
+    apt:
+      namee: wget
