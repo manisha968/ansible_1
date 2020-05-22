@@ -5,13 +5,12 @@
   - name: install git
     apt: 
       name: git
-    ignore_errors: yes
-   
+    
   - name: install tree
     apt:
-      name: tree
+      namee: tree
     ignore_errors: yes
     
   - name: install wget
     apt:
-      namee: wget
+      name: wget
