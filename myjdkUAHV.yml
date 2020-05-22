@@ -2,7 +2,7 @@
 - hosts: webservers
   become: yes
   tasks:
-  - name: install jdk11 on ubuntu18 node
+  - name: install jdk11 on ubuntu18 node1 
     apt:
      name: "{{myjavaonubuntuos}}"
      state: present
