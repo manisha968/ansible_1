@@ -1,0 +1,10 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+  - name: install jdk11 on ubuntu18 node
+    apt:
+     name: "{{myjavaonubuntuos}}"
+     state: present
+    when: ansible_os_family == "Debian"
+     
