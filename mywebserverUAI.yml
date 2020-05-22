@@ -2,7 +2,7 @@
 - hosts: webservers
   become: yes
   tasks: 
-  - name: install websever(apache2) on ubuntu18
+  - name: install websever(apache2) on ubuntu18 node1
     apt:
      name:  apache2
      state: present
@@ -13,4 +13,5 @@
      name: apache2
      state: started
     when: ansible_os_family == "Debian" 
+
 
