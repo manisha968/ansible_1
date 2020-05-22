@@ -4,7 +4,7 @@
   tasks: 
   - name: install jdk8 on ubuntu18 node
     apt:
-     name: "{{myjavanonubuntu}}"
+     name: "{{myjavanonubuntuos}}"
      state: present
     when: ansible_os_family == "Debian"
      
