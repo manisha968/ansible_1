@@ -15,5 +15,5 @@
   template:
    src: templates/mytomuser.j2
    dest: /opt/tomcat9-users.xml
-  notify: restart tomcat9 
+  notify: restarttomcat9 
 
