@@ -11,14 +11,6 @@
    dest: /opt/tomcat
   notify: starttomcat9
 
-- name: install Admin packages
-  apt:
-   name: "{{ item }}"
-   state: present
-  with_items: 
-    - tomcat-webapps
-    - tomcat-admin-webapps
-
 - name: copy tom user file into all nodes
   template:
    src: templates/mytomuser.j2
