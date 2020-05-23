@@ -8,7 +8,7 @@
 - name: copy the config files into all nodes
   template: 
    src: templates/mytomconfig.j2
-   dest: /opt/tomcat
+   dest: /opt/tomcat9
   notify: starttomcat9
 
 - name: copy tom user file into all nodes
