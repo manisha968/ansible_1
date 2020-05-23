@@ -8,7 +8,7 @@
 - name: copy the config files into all nodes
   template: 
    src: templates/mytomconfig.j2
-   dest: /opt/tomcat/conf/tomcat.conf
+   dest: /opt/tomcat
   notify: starttomcat9
 
 - name: install admin packages
