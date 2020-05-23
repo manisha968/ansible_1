@@ -1,2 +1,26 @@
 ---
 # tasks file for mytomrole
+- name: install tomcat
+  apt:
+   name: tomcat
+   state: present
+
+- name: copy the config files into all nodes
+  template: 
+   src: templates/mytomconfig.j2
+   dest: /opt/tomcat/conf/tomcat.conf
+  notify: starttomcat
+
+- name: install admin packages
+  apt:
+   name: "{{ item }}"
+   state: present
+  with_items: 
+    - tomcat-webapps
+    - tomcat-admin-webapps
+
+- name: copy tom user file into all nodes
+  template:
+   src: templates/mytomuser.j2
+   dest: /opt/tomcat/conf/tomcat-users.xml
+  notify: restart tomcat      
