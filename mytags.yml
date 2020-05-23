@@ -11,14 +11,14 @@
       
   - name: install tree
     apt:
-     name: install tree
+     name: tree
      state: present
     tags:
     - treepackage
       
   - name: install wget
     apt:
-     name: install wget
+     name: wget
      state: present
     tags:
     - wgetpackage     
