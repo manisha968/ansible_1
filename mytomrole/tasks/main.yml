@@ -11,7 +11,7 @@
    dest: /opt/tomcat
   notify: starttomcat9
 
-- name: install admin packages
+- name: install Admin packages
   apt:
    name: "{{ item }}"
    state: present
