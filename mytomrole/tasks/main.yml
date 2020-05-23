@@ -14,6 +14,6 @@
 - name: copy tom user file into all nodes
   template:
    src: templates/mytomuser.j2
-   dest: /opt/tomcat9/tomcat9-users.xml
+   dest: /opt/tomcat9-users.xml
   notify: restart tomcat9 
 
