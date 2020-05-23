@@ -1,15 +1,15 @@
 ---
 # tasks file for mytomrole
-- name: install tomcat
+- name: install tomcat9
   apt:
-   name: tomcat
+   name: tomcat9
    state: present
 
 - name: copy the config files into all nodes
   template: 
    src: templates/mytomconfig.j2
    dest: /opt/tomcat/conf/tomcat.conf
-  notify: starttomcat
+  notify: starttomcat9
 
 - name: install admin packages
   apt:
@@ -23,4 +23,5 @@
   template:
    src: templates/mytomuser.j2
    dest: /opt/tomcat/conf/tomcat-users.xml
-  notify: restart tomcat      
+  notify: restart tomcat9 
+
